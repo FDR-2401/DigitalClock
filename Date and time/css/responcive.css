@@ -1,0 +1,21 @@
+@media (min-width: 320px) and (max-width: 575.99px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .clock span{
+        font-size: 30px;
+    }
+
+    .clock span::after {
+        content: "";
+        font-size: 14px;
+        position: absolute;
+        bottom: -23px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+
+    
+}

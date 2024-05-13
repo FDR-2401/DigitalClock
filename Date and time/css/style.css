@@ -1,0 +1,113 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: nunito;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197dd9) ;
+    color: #FFF;
+    overflow: hidden;
+    position: relative;
+}
+.hero::after {
+    content: "";
+    background: url(/images/mearif.jpg) no-repeat center /cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hero h1{
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    font-family: "Sedan SC", serif;
+}
+.container {
+    max-width: 800px;
+    height: 180px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container::before{
+    content: "";
+    width: 180px;
+    height: 180px;
+    background: #f41b75;
+    border-radius: 20px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+    
+}
+.container::after{
+    content: "";
+    width: 180px;
+    height: 180px;
+    background: #4c87fe;
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+    z-index: -1;
+    
+}
+.clock {
+    width: 100%;
+    height: 180px;
+    background: rgb(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+
+.clock span{
+    font-size: 80px;
+    font-weight: 700;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.clock span::after{
+    content: "";
+    font-size: 16px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#hrs::after{
+    content: "HOURS";
+}
+
+#min::after{
+    content: "MINS";
+}
+
+#sec::after{
+    content: "SEC";
+}
+
+.container .text {
+    bottom: -30px;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 50%;
+}
